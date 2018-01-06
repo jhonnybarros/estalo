@@ -1,0 +1,217 @@
+/*
+Theme Name: Estalo Design
+Theme URI: https://www.estalodesign.com
+Description: Tema do site da Empresa júnior de Design da UTFPR Curitiba.
+Author: Estalo Design
+Author URI: https://www.estalodesign.com
+Version: 1.0
+*/
+
+/* COLOR USED
+
+COLOR BASE: #f7be00;
+COLOR DARK: #414141;
+COLOR LIGHT: #f4f4f4;
+
+*/
+
+
+
+
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/* GENERAL */
+* {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f4f4f4;
+}
+a {
+  color: #f7be00;
+  text-decoration: none;
+
+}
+/* HEADER */
+
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #414141;
+    height: 120px;
+    padding: 10px 0 20px 0;
+}
+
+.menu-item {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0 30px;
+    color: #f7be00;
+    font-size: 20px;
+    font-weight: bold;
+    list-style-type: none;
+    float: left;
+}
+
+.menu-item a:before{
+    content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #f7be00;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.menu-item a:hover:before{
+    visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.menu-item a {
+    color: #f7be00;
+    text-decoration: none;
+    position: relative;
+}
+
+
+/* INTRO */
+
+section.intro {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #414141;
+    height: 500px;
+}
+
+.intro > div {
+    height: 150px;
+    width: 150px;
+    z-index: 1;
+    font-size: 30px;
+    font-weight: bolder;
+    color: #f7be00;
+    padding: 10px 30px 50px 15px; 
+    border: 5px solid #f7be00;
+}
+img.egg {
+    height: 300px;
+    top: 40%;
+    left: 52%;
+    z-index: 2;
+    position: absolute;
+}
+
+
+  .arrow,
+  .arrow:before {
+    position: absolute;
+    left: 50%;
+  }
+  .arrow {
+    width: 40px;
+    height: 40px;
+    top: 600px;
+    margin: -20px 0 0 -20px;
+    -webkit-transform: rotate(45deg);
+    border-left: none;
+    border-top: none;
+    border-right: 4px #f7be00 solid;
+    border-bottom: 4px #f7be00 solid;
+  }
+  .arrow:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    margin: -10px 0 0 -10px;
+    border-left: none;
+    border-top: none;
+    border-right: 2px #f7be00 solid;
+    border-bottom: 2px #f7be00 solid;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: arrow;
+  }
+  @keyframes arrow {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-10px, -10px);
+    }
+  }
+
+
+  /* SECTIONS */
+
+section.light-sec {
+  width: 70%;
+  margin: 30px auto;
+  background: #f4f4f4;
+  color: #414141;
+  }
+section.dark-sec {
+  width: auto;
+  margin: 30px auto;
+  padding: 0 15%;
+  background: #414141;
+  color: #f4f4f4;
+  }
+
+  /* WHO */
+
+.who > .content{
+  display: flex;
+  flex-wrap: wrap;
+  }
+.who > h2.quem, .who > h2.onde{
+  flex-grow: 1;
+  font-size: 40px;
+  font-weight: bolder;
+  color: #f7be00;
+  }
+.who > h2.onde{
+  text-align: right;
+}
+.content > .who-img{
+  background: #f7be00;
+  width: 45%;
+}
+.content > p{
+  width: 50%;
+  text-align: justify;
+  padding: 0 10px;
+}
+
+/* FOOTER */
+
+footer {
+  height: 50px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  background: #414141;
+  padding: 20px;
+  color: #f7be00;
+}
